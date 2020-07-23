@@ -20,14 +20,38 @@ def spiralstar(lines, degrees, increase):
     t.fd(steps)
     t.rt(degrees)
     steps += increase
+    t.color("red")
+    t.fd(steps)
+    t.rt(degrees)
+    steps += increase
+    t.color("blue")
 
-#spiralstar(200, 556, 4)
+#spiralstar(100, 556, 4)
 
-def triangle(lines, degrees, increase):
+def spirotriangle(lines, degrees, increase):
   steps = 2
   for i in range(lines):
     t.fd(steps)
     t.rt(degrees)
     steps += increase
+    t.color("red")
+    t.fd(steps)
+    t.rt(degrees)
+    steps += increase
+    t.color("blue")
 
-#triangle(100, 120, 3)
+#spirotriangle(320, 119, 2)
+
+
+def sphere(size):
+  shade = 125
+  t.color(0,0,shade)
+  while size > 0:
+    t.beginfill()
+    shape(30, size)
+    t.endfill()
+    size -= 5
+    shade += 5
+    t.color(0,0,shade)
+
+sphere(15)
