@@ -1,5 +1,11 @@
 import turtle
 import math
+s = turtle.screen
+
+def shape(sides, size):
+	for i in range(sides):
+		t.fd(size)
+		t.rt(360.0/sides)
 
 t = turtle.Turtle()
 t.speed(0)
@@ -53,5 +59,15 @@ def sphere(size):
 		size -= .5
 		shade += 5
 		t.color(0,0,shade)
+  
+#sphere(100, 10, 50)
 
-sphere(15)
+def pattern():
+  steps = 3
+  for i in range(lines):
+    t.fd(steps)
+    t.rt(degrees)
+    steps += increase
+
+s.onkey(pattern, "space")
+s.listen()
