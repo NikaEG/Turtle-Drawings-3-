@@ -44,14 +44,14 @@ def spirotriangle(lines, degrees, increase):
 
 
 def sphere(size):
-  shade = 125
-  t.color(0,0,shade)
-  while size > 0:
-    t.beginfill()
-    shape(30, size)
-    t.endfill()
-    size -= 5
-    shade += 5
-    t.color(0,0,shade)
+	shade = 125
+	t.color(0,0,shade)
+	while size > 0:
+		t.begin_fill()
+		shape(30, size)
+		t.end_fill()
+		size -= .5
+		shade += 5
+		t.color(0,0,shade)
 
 sphere(15)
